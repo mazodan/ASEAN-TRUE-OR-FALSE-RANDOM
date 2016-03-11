@@ -6,6 +6,7 @@
     Dim rInteger As Integer             'The random number to be Used
     Dim QuestionIndex As Integer = 0    'the current Question
     Dim Ans As String
+    Dim life As String = "###"
 
 
     Private Sub MainGame_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -72,7 +73,7 @@
 
     Private Sub Qtimer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Qtimer.Tick
         If oras = 0 Or oras < 0 Then    'Automatic Pass if timer reached zero
-
+            nxtQuestion()
         Else
             txtTimeLeft.Text = oras
             oras -= 0.01
@@ -97,7 +98,10 @@
             txtScore.Text = score
             nxtQuestion()
         Else
+            lives -= 1
+            lblLife.Text = lives.ToString
             nxtQuestion()
+
         End If
     End Sub
 
@@ -107,5 +111,17 @@
         SelectRandomNumber()            'Selects the random number to be used
         MGF.SetTheQuestionAndAnswer(rInteger, txtQuestion, Q.QA)
         lblQuestionNumber.Text = QuestionIndex + 1
+    End Sub
+
+  
+    Private Sub btnPass_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPass.Click
+        If pass > 0 Then
+            pass -= 1
+            lblPass.Text = pass
+            nxtQuestion()
+        End If
+        If pass = 0 Then
+            btnPass.Visible = False
+        End If
     End Sub
 End Class

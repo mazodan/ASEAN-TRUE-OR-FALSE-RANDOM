@@ -61,9 +61,9 @@ Partial Class MainGame
         Me.lblLife.ForeColor = System.Drawing.Color.Red
         Me.lblLife.Location = New System.Drawing.Point(155, 13)
         Me.lblLife.Name = "lblLife"
-        Me.lblLife.Size = New System.Drawing.Size(66, 26)
+        Me.lblLife.Size = New System.Drawing.Size(23, 26)
         Me.lblLife.TabIndex = 4
-        Me.lblLife.Text = "❤❤❤"
+        Me.lblLife.Text = "3"
         '
         'Label3
         '
@@ -84,9 +84,9 @@ Partial Class MainGame
         Me.lblPass.ForeColor = System.Drawing.Color.Red
         Me.lblPass.Location = New System.Drawing.Point(358, 13)
         Me.lblPass.Name = "lblPass"
-        Me.lblPass.Size = New System.Drawing.Size(40, 26)
+        Me.lblPass.Size = New System.Drawing.Size(23, 26)
         Me.lblPass.TabIndex = 6
-        Me.lblPass.Text = "✓✓"
+        Me.lblPass.Text = "2"
         '
         'Label1
         '
