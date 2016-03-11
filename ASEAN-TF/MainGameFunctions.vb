@@ -19,10 +19,11 @@ Public Class MainGameFunctions
 
     Sub MakeAllValuesInArrayHundred()
         'Makes all value in arrays 100 for comparison purposes
-        For Each Str As String In AnswerArrays
-            Str = "100"
-            'THERE, LESS WORK FOR THE PROGRAMMER
+        For i As Integer = 0 To 14
+            AnswerArrays.Add("100")
         Next
+        'THERE, LESS WORK FOR THE PROGRAMMER
+
     End Sub
 
     Sub setTheTimeAndScore(ByVal time As TextBox, ByVal TXscore As TextBox)
@@ -41,6 +42,16 @@ Public Class MainGameFunctions
         'next is used as a reference which range will the random number fall to
     End Function
 
+    Sub SetTheQuestionAndAnswer(ByVal rNum As Integer, ByVal txtBx As TextBox, ByVal lst As Array)
+        txtBx.Text = lst(rNum)(0)
+    End Sub
 
+    Sub playTheQuestionSound()
+        My.Computer.Audio.Play(My.Resources.QuestionSound, AudioPlayMode.Background)
+    End Sub
+
+    Sub StopBackgroundSound()
+        My.Computer.Audio.Stop()
+    End Sub
 
 End Class
