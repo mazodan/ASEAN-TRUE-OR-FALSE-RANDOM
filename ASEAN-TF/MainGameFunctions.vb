@@ -19,7 +19,7 @@ Public Class MainGameFunctions
 
     Sub MakeAllValuesInArrayHundred()
         'Makes all value in arrays 100 for comparison purposes
-        For i As Integer = 0 To 14
+        For i As Integer = 0 To 15
             AnswerArrays.Add("100")
         Next
         'THERE, LESS WORK FOR THE PROGRAMMER

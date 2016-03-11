@@ -106,6 +106,7 @@
     End Sub
 
     Sub nxtQuestion()
+        winCondition()
         oras = 10.0
         QuestionIndex += 1
         SelectRandomNumber()            'Selects the random number to be used
@@ -122,6 +123,14 @@
         End If
         If pass = 0 Then
             btnPass.Visible = False
+        End If
+    End Sub
+
+    Sub winCondition()
+        If lblQuestionNumber.Text = "15" Or score = 10 Or lives = 0 Then
+            CloseState = False
+            Result.Show()
+            Me.Close()
         End If
     End Sub
 End Class
