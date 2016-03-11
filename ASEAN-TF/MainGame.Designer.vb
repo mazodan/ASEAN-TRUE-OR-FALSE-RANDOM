@@ -31,14 +31,15 @@ Partial Class MainGame
         Me.txtScore = New System.Windows.Forms.TextBox
         Me.Label4 = New System.Windows.Forms.Label
         Me.txtTimeLeft = New System.Windows.Forms.TextBox
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.pbarTime = New System.Windows.Forms.ProgressBar
+        Me.Qtimer = New System.Windows.Forms.Timer(Me.components)
         Me.txtQuestion = New System.Windows.Forms.TextBox
         Me.Label5 = New System.Windows.Forms.Label
         Me.btnTrue = New System.Windows.Forms.Button
         Me.btnFalse = New System.Windows.Forms.Button
         Me.stBtnR = New System.Windows.Forms.Button
         Me.lblQuestionNumber = New System.Windows.Forms.Label
+        Me.btnPass = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Label2
@@ -137,18 +138,18 @@ Partial Class MainGame
         Me.txtTimeLeft.TabStop = False
         Me.txtTimeLeft.Text = "10"
         '
-        'ProgressBar1
+        'pbarTime
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(12, 112)
-        Me.ProgressBar1.Maximum = 10
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(588, 23)
-        Me.ProgressBar1.TabIndex = 11
-        Me.ProgressBar1.Value = 10
+        Me.pbarTime.Location = New System.Drawing.Point(12, 112)
+        Me.pbarTime.Maximum = 10
+        Me.pbarTime.Name = "pbarTime"
+        Me.pbarTime.Size = New System.Drawing.Size(588, 23)
+        Me.pbarTime.TabIndex = 11
+        Me.pbarTime.Value = 10
         '
-        'Timer1
+        'Qtimer
         '
-        Me.Timer1.Interval = 10
+        Me.Qtimer.Interval = 10
         '
         'txtQuestion
         '
@@ -221,19 +222,32 @@ Partial Class MainGame
         Me.lblQuestionNumber.TabIndex = 17
         Me.lblQuestionNumber.Text = "1"
         '
+        'btnPass
+        '
+        Me.btnPass.BackColor = System.Drawing.Color.Lime
+        Me.btnPass.Font = New System.Drawing.Font("Lucida Console", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPass.ForeColor = System.Drawing.Color.Snow
+        Me.btnPass.Location = New System.Drawing.Point(533, 63)
+        Me.btnPass.Name = "btnPass"
+        Me.btnPass.Size = New System.Drawing.Size(67, 36)
+        Me.btnPass.TabIndex = 18
+        Me.btnPass.Text = "PASS"
+        Me.btnPass.UseVisualStyleBackColor = False
+        '
         'MainGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(612, 360)
+        Me.Controls.Add(Me.btnPass)
         Me.Controls.Add(Me.lblQuestionNumber)
         Me.Controls.Add(Me.stBtnR)
         Me.Controls.Add(Me.btnFalse)
         Me.Controls.Add(Me.btnTrue)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtQuestion)
-        Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.pbarTime)
         Me.Controls.Add(Me.txtTimeLeft)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtScore)
@@ -259,12 +273,13 @@ Partial Class MainGame
     Friend WithEvents txtScore As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtTimeLeft As System.Windows.Forms.TextBox
-    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents pbarTime As System.Windows.Forms.ProgressBar
+    Friend WithEvents Qtimer As System.Windows.Forms.Timer
     Friend WithEvents txtQuestion As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents btnTrue As System.Windows.Forms.Button
     Friend WithEvents btnFalse As System.Windows.Forms.Button
     Friend WithEvents stBtnR As System.Windows.Forms.Button
     Friend WithEvents lblQuestionNumber As System.Windows.Forms.Label
+    Friend WithEvents btnPass As System.Windows.Forms.Button
 End Class

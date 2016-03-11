@@ -43,7 +43,9 @@ Public Class MainGameFunctions
     End Function
 
     Sub SetTheQuestionAndAnswer(ByVal rNum As Integer, ByVal txtBx As TextBox, ByVal lst As Array)
-        txtBx.Text = lst(rNum)(0)
+        txtBx.Text = lst(rNum)(0)       'Displays the question in the Textbox
+        'using the random number
+        QuizAnswer = lst(rNum)(1)       'sets the answer of the Question
     End Sub
 
     Sub playTheQuestionSound()

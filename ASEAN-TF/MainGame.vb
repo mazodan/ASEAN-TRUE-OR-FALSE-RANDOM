@@ -4,7 +4,9 @@
     Dim MGF As New MainGameFunctions    'Declare new instance of the object
     Dim Q As New Questions
     Dim rInteger As Integer             'The random number to be Used
-    Dim QuestionIndex As Integer = 0
+    Dim QuestionIndex As Integer = 0    'the current Question
+    Dim Ans As String
+
 
     Private Sub MainGame_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MGF.initializeTheVariables()    'Initializes the pertinent values
@@ -14,8 +16,10 @@
         SelectRandomNumber()            'Selects the random number to be used
         Q.LoadQuestions()               'Loads all questions to the Jagged Array
         MGF.SetTheQuestionAndAnswer(rInteger, txtQuestion, Q.QA)
+        'Sets the question using the Random integer
         MGF.playTheQuestionSound()
-
+        'PLAYS THE BACKGROUND SOUND
+        Qtimer.Start()
 
 
     End Sub
@@ -23,6 +27,7 @@
     Private Sub MainGame_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         If CloseState = True Then
             txtQuestion.Visible = False
+            Qtimer.Enabled = False
             If MessageBox.Show("Are you sure you want to Quit this quiz", "Quit?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = Windows.Forms.DialogResult.Yes Then
                 MainMenu.Show()
                 AnswerArrays.Clear()    'clears the array to recycle for next game
@@ -30,6 +35,7 @@
             Else
                 e.Cancel = True
                 txtQuestion.Visible = True
+                Qtimer.Enabled = True
             End If
         End If
     End Sub
@@ -62,5 +68,44 @@
                 'Exits While statement without messing with the condition
             End If
         End While
+    End Sub
+
+    Private Sub Qtimer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Qtimer.Tick
+        If oras = 0 Or oras < 0 Then    'Automatic Pass if timer reached zero
+
+        Else
+            txtTimeLeft.Text = oras
+            oras -= 0.01
+            pbarTime.Value = oras
+        End If
+    End Sub
+
+
+    Private Sub btnTrue_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnTrue.Click
+        Ans = "True"
+        checkAnswer()
+    End Sub
+
+    Private Sub btnFalse_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFalse.Click
+        Ans = "False"
+        checkAnswer()
+    End Sub
+
+    Sub checkAnswer()
+        If Ans = QuizAnswer Then
+            score += 1
+            txtScore.Text = score
+            nxtQuestion()
+        Else
+            nxtQuestion()
+        End If
+    End Sub
+
+    Sub nxtQuestion()
+        oras = 10.0
+        QuestionIndex += 1
+        SelectRandomNumber()            'Selects the random number to be used
+        MGF.SetTheQuestionAndAnswer(rInteger, txtQuestion, Q.QA)
+        lblQuestionNumber.Text = QuestionIndex + 1
     End Sub
 End Class
