@@ -43,13 +43,6 @@ Public Class MainGame
         End If
     End Sub
 
-    'Temporary stub
-    Private Sub stBtnR_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles stBtnR.Click
-
-
-
-        MessageBox.Show(MGF.rNumber(0, 21))
-    End Sub
 
     Sub SelectRandomNumber()
         Dim QuestionAlreadyUsed = True

@@ -38,7 +38,6 @@ Partial Class MainGame
         Me.Label5 = New System.Windows.Forms.Label
         Me.btnTrue = New System.Windows.Forms.Button
         Me.btnFalse = New System.Windows.Forms.Button
-        Me.stBtnR = New System.Windows.Forms.Button
         Me.lblQuestionNumber = New System.Windows.Forms.Label
         Me.btnPass = New System.Windows.Forms.Button
         Me.wmp = New AxWMPLib.AxWindowsMediaPlayer
@@ -205,15 +204,6 @@ Partial Class MainGame
         Me.btnFalse.Text = "FALSE"
         Me.btnFalse.UseVisualStyleBackColor = False
         '
-        'stBtnR
-        '
-        Me.stBtnR.Location = New System.Drawing.Point(49, 66)
-        Me.stBtnR.Name = "stBtnR"
-        Me.stBtnR.Size = New System.Drawing.Size(117, 23)
-        Me.stBtnR.TabIndex = 16
-        Me.stBtnR.Text = "RandomTest"
-        Me.stBtnR.UseVisualStyleBackColor = True
-        '
         'lblQuestionNumber
         '
         Me.lblQuestionNumber.AutoSize = True
@@ -255,7 +245,6 @@ Partial Class MainGame
         Me.Controls.Add(Me.wmp)
         Me.Controls.Add(Me.btnPass)
         Me.Controls.Add(Me.lblQuestionNumber)
-        Me.Controls.Add(Me.stBtnR)
         Me.Controls.Add(Me.btnFalse)
         Me.Controls.Add(Me.btnTrue)
         Me.Controls.Add(Me.Label5)
@@ -293,7 +282,6 @@ Partial Class MainGame
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents btnTrue As System.Windows.Forms.Button
     Friend WithEvents btnFalse As System.Windows.Forms.Button
-    Friend WithEvents stBtnR As System.Windows.Forms.Button
     Friend WithEvents lblQuestionNumber As System.Windows.Forms.Label
     Friend WithEvents btnPass As System.Windows.Forms.Button
     Friend WithEvents wmp As AxWMPLib.AxWindowsMediaPlayer
