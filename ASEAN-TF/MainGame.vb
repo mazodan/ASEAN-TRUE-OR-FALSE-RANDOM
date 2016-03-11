@@ -1,4 +1,6 @@
-﻿Public Class MainGame
+﻿Imports WMPLib
+
+Public Class MainGame
     Dim CloseState As Boolean = True    'THIS IS SWITCHED IF THE USER FINISHED THE QUIZ
     'TO PREVENT GOING BACK TO THE MAIN MENU
     Dim MGF As New MainGameFunctions    'Declare new instance of the object
@@ -43,7 +45,7 @@
 
     'Temporary stub
     Private Sub stBtnR_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles stBtnR.Click
-        
+
 
 
         MessageBox.Show(MGF.rNumber(0, 21))
@@ -93,11 +95,18 @@
     End Sub
 
     Sub checkAnswer()
+        Dim ResourceFilePath As String
         If Ans = QuizAnswer Then
+            ResourceFilePath = System.IO.Path.GetFullPath(Application.StartupPath & "\..\..\resources\")
+            wmp.URL = ResourceFilePath & "\tama.wav"
+            wmp.Ctlcontrols.play()
             score += 1
             txtScore.Text = score
             nxtQuestion()
         Else
+            ResourceFilePath = System.IO.Path.GetFullPath(Application.StartupPath & "\..\..\resources\")
+            wmp.URL = ResourceFilePath & "\mali.wav"
+            wmp.Ctlcontrols.play()
             lives -= 1
             lblLife.Text = lives.ToString
             nxtQuestion()
@@ -114,7 +123,7 @@
         lblQuestionNumber.Text = QuestionIndex + 1
     End Sub
 
-  
+
     Private Sub btnPass_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPass.Click
         If pass > 0 Then
             pass -= 1
@@ -128,7 +137,13 @@
 
     Sub winCondition()
         If lblQuestionNumber.Text = "15" Or score = 10 Or lives = 0 Then
+            If score = 10 Then      'Determines if player got score of 10
+                WinCond = True
+            Else
+                WinCond = False
+            End If
             CloseState = False
+            MGF.StopBackgroundSound()
             Result.Show()
             Me.Close()
         End If

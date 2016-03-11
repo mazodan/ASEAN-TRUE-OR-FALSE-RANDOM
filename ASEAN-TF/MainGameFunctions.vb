@@ -49,7 +49,7 @@ Public Class MainGameFunctions
     End Sub
 
     Sub playTheQuestionSound()
-        My.Computer.Audio.Play(My.Resources.QuestionSound, AudioPlayMode.Background)
+        My.Computer.Audio.Play(My.Resources.QuestionSound, AudioPlayMode.BackgroundLoop)
     End Sub
 
     Sub StopBackgroundSound()

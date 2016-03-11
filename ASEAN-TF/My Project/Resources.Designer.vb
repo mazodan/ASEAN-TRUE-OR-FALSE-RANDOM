@@ -88,9 +88,33 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property Lose() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Lose", resourceCulture)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property mali() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("mali", resourceCulture)
+            End Get
+        End Property
+        
         Friend ReadOnly Property QuestionSound() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("QuestionSound", resourceCulture)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property tama() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("tama", resourceCulture)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property Winner() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Winner", resourceCulture)
             End Get
         End Property
     End Module

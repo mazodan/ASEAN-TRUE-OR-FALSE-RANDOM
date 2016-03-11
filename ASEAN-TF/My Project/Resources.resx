@@ -133,4 +133,16 @@
   <data name="QuestionSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\QuestionSound.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="tama" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tama.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mali" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mali.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Lose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lose.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Winner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Winner.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

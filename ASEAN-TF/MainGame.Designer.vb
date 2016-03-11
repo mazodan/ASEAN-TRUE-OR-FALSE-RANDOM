@@ -23,6 +23,7 @@ Partial Class MainGame
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainGame))
         Me.Label2 = New System.Windows.Forms.Label
         Me.lblLife = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
@@ -40,6 +41,8 @@ Partial Class MainGame
         Me.stBtnR = New System.Windows.Forms.Button
         Me.lblQuestionNumber = New System.Windows.Forms.Label
         Me.btnPass = New System.Windows.Forms.Button
+        Me.wmp = New AxWMPLib.AxWindowsMediaPlayer
+        CType(Me.wmp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -234,12 +237,22 @@ Partial Class MainGame
         Me.btnPass.Text = "PASS"
         Me.btnPass.UseVisualStyleBackColor = False
         '
+        'wmp
+        '
+        Me.wmp.Enabled = True
+        Me.wmp.Location = New System.Drawing.Point(624, 313)
+        Me.wmp.Name = "wmp"
+        Me.wmp.OcxState = CType(resources.GetObject("wmp.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.wmp.Size = New System.Drawing.Size(41, 23)
+        Me.wmp.TabIndex = 19
+        '
         'MainGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(612, 360)
+        Me.Controls.Add(Me.wmp)
         Me.Controls.Add(Me.btnPass)
         Me.Controls.Add(Me.lblQuestionNumber)
         Me.Controls.Add(Me.stBtnR)
@@ -261,6 +274,7 @@ Partial Class MainGame
         Me.Name = "MainGame"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MainGame"
+        CType(Me.wmp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -282,4 +296,5 @@ Partial Class MainGame
     Friend WithEvents stBtnR As System.Windows.Forms.Button
     Friend WithEvents lblQuestionNumber As System.Windows.Forms.Label
     Friend WithEvents btnPass As System.Windows.Forms.Button
+    Friend WithEvents wmp As AxWMPLib.AxWindowsMediaPlayer
 End Class
