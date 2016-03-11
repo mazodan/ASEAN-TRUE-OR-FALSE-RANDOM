@@ -36,6 +36,7 @@ Partial Class MainGame
         Me.TextBox3 = New System.Windows.Forms.TextBox
         Me.Label5 = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Label2
@@ -176,12 +177,27 @@ Partial Class MainGame
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Lime
+        Me.Button1.Font = New System.Drawing.Font("Lucida Console", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Snow
         Me.Button1.Location = New System.Drawing.Point(49, 244)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(221, 104)
         Me.Button1.TabIndex = 14
         Me.Button1.Text = "TRUE"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Firebrick
+        Me.Button2.Font = New System.Drawing.Font("Lucida Console", 45.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.Info
+        Me.Button2.Location = New System.Drawing.Point(332, 244)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(221, 104)
+        Me.Button2.TabIndex = 15
+        Me.Button2.Text = "FALSE"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'MainGame
         '
@@ -189,6 +205,7 @@ Partial Class MainGame
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(612, 360)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox3)
@@ -223,4 +240,5 @@ Partial Class MainGame
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

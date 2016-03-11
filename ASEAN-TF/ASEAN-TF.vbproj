@@ -101,6 +101,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Questions.vb" />
+    <Compile Include="Result.Designer.vb">
+      <DependentUpon>Result.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Result.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Instructions.resx">
@@ -117,6 +123,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result.resx">
+      <DependentUpon>Result.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +147,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asean-summit.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

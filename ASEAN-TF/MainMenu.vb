@@ -8,7 +8,8 @@
         Application.Exit()          'Quits the app
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    
+    Private Sub btnStart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStart.Click
         'THIS IS A STUB
         'Dim xforce As New Questions
         'xforce.LoadQuestions()

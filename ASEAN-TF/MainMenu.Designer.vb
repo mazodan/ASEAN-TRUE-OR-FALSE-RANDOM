@@ -26,7 +26,7 @@ Partial Class MainMenu
         Me.Label2 = New System.Windows.Forms.Label
         Me.btnHelp = New System.Windows.Forms.Button
         Me.Label3 = New System.Windows.Forms.Label
-        Me.Button2 = New System.Windows.Forms.Button
+        Me.btnStart = New System.Windows.Forms.Button
         Me.btnExit = New System.Windows.Forms.Button
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
@@ -79,17 +79,17 @@ Partial Class MainMenu
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "TEST YOUR ASEAN KNOWLEDGE"
         '
-        'Button2
+        'btnStart
         '
-        Me.Button2.BackColor = System.Drawing.Color.Red
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Gold
-        Me.Button2.Location = New System.Drawing.Point(276, 260)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(80, 51)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "START"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnStart.BackColor = System.Drawing.Color.Red
+        Me.btnStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStart.ForeColor = System.Drawing.Color.Gold
+        Me.btnStart.Location = New System.Drawing.Point(276, 260)
+        Me.btnStart.Name = "btnStart"
+        Me.btnStart.Size = New System.Drawing.Size(80, 51)
+        Me.btnStart.TabIndex = 5
+        Me.btnStart.Text = "START"
+        Me.btnStart.UseVisualStyleBackColor = False
         '
         'btnExit
         '
@@ -131,7 +131,7 @@ Partial Class MainMenu
         Me.ClientSize = New System.Drawing.Size(580, 323)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.btnExit)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnHelp)
         Me.Controls.Add(Me.Label2)
@@ -153,7 +153,7 @@ Partial Class MainMenu
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnHelp As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnStart As System.Windows.Forms.Button
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
 
