@@ -23,7 +23,17 @@
         QA(17) = New String() {"ZOPFAN is the acronym for  Zone of Peace", "False"}
         QA(18) = New String() {"Philippine hosted 2013 Asean Games", "False"}
         QA(19) = New String() {"The Philippines comprises of 10,000 islands.", "False"}
-        QA(20) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
+        QA(20) = New String() {"Thailand shares a border with Myanmar, Laos, Cambodia and Malaysia", "True"}
+        QA(21) = New String() {"Luzon is the largest island in the Philippines", "True"}
+        QA(22) = New String() {"The merlion has a lion head and a fish body resting in the crest of waves", "True"}
+        QA(23) = New String() {"The red color in the ASEAN flag depicts courage and dynamism", "True"}
+        QA(24) = New String() {"Sultan Omar Ali Saifuddin Mosque is located in Kuala Lumpur, Malaysia", "False"}
+        QA(25) = New String() {"The 2013 SEA games is held in Bangkok, Thailand", "False"}
+        QA(26) = New String() {"Dr. Suwin Pitsuwan is the 13th Secretary-General of ASEAN", "False"}
+        QA(27) = New String() {"The red color in the ASEAN flag depicts courage and dynamism", "True"}
+        QA(28) = New String() {"Noi Bai International Airport is located in Ho Chi Minh City, Vietnam", "False"}
+        QA(29) = New String() {"Nasi Lemak is one of the well known dishes from Malaysia", "True"}
+        QA(30) = New String() {"Burobudur was built 300 years before Cambodia's Angkor Wat", "True"}
     End Sub
 
 End Class

@@ -25,9 +25,9 @@ Partial Class Result
         Me.lblRes = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
         Me.txtScore = New System.Windows.Forms.TextBox
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
+        Me.btnAgain = New System.Windows.Forms.Button
+        Me.btnMainMenu = New System.Windows.Forms.Button
+        Me.btnExit = New System.Windows.Forms.Button
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -68,41 +68,41 @@ Partial Class Result
         Me.txtScore.TabStop = False
         Me.txtScore.Text = "10"
         '
-        'Button1
+        'btnAgain
         '
-        Me.Button1.BackColor = System.Drawing.Color.Lime
-        Me.Button1.Font = New System.Drawing.Font("Lucida Console", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Snow
-        Me.Button1.Location = New System.Drawing.Point(234, 133)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(123, 67)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "PLAY AGAIN"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnAgain.BackColor = System.Drawing.Color.Lime
+        Me.btnAgain.Font = New System.Drawing.Font("Lucida Console", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgain.ForeColor = System.Drawing.Color.Snow
+        Me.btnAgain.Location = New System.Drawing.Point(234, 133)
+        Me.btnAgain.Name = "btnAgain"
+        Me.btnAgain.Size = New System.Drawing.Size(123, 67)
+        Me.btnAgain.TabIndex = 17
+        Me.btnAgain.Text = "PLAY AGAIN"
+        Me.btnAgain.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnMainMenu
         '
-        Me.Button2.BackColor = System.Drawing.Color.Lime
-        Me.Button2.Font = New System.Drawing.Font("Lucida Console", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Snow
-        Me.Button2.Location = New System.Drawing.Point(363, 133)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(120, 67)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "MAIN MENU"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnMainMenu.BackColor = System.Drawing.Color.Lime
+        Me.btnMainMenu.Font = New System.Drawing.Font("Lucida Console", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMainMenu.ForeColor = System.Drawing.Color.Snow
+        Me.btnMainMenu.Location = New System.Drawing.Point(363, 133)
+        Me.btnMainMenu.Name = "btnMainMenu"
+        Me.btnMainMenu.Size = New System.Drawing.Size(120, 67)
+        Me.btnMainMenu.TabIndex = 18
+        Me.btnMainMenu.Text = "MAIN MENU"
+        Me.btnMainMenu.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnExit
         '
-        Me.Button3.BackColor = System.Drawing.Color.Lime
-        Me.Button3.Font = New System.Drawing.Font("Lucida Console", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.Snow
-        Me.Button3.Location = New System.Drawing.Point(489, 133)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(120, 67)
-        Me.Button3.TabIndex = 19
-        Me.Button3.Text = "EXIT"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnExit.BackColor = System.Drawing.Color.Lime
+        Me.btnExit.Font = New System.Drawing.Font("Lucida Console", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.Snow
+        Me.btnExit.Location = New System.Drawing.Point(489, 133)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(120, 67)
+        Me.btnExit.TabIndex = 19
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -120,14 +120,18 @@ Partial Class Result
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(670, 237)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnMainMenu)
+        Me.Controls.Add(Me.btnAgain)
         Me.Controls.Add(Me.txtScore)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblRes)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Result"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Result"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -138,7 +142,7 @@ Partial Class Result
     Friend WithEvents lblRes As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtScore As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnAgain As System.Windows.Forms.Button
+    Friend WithEvents btnMainMenu As System.Windows.Forms.Button
+    Friend WithEvents btnExit As System.Windows.Forms.Button
 End Class
