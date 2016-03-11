@@ -28,15 +28,17 @@ Partial Class MainGame
         Me.Label3 = New System.Windows.Forms.Label
         Me.lblPass = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
-        Me.TextBox1 = New System.Windows.Forms.TextBox
+        Me.txtScore = New System.Windows.Forms.TextBox
         Me.Label4 = New System.Windows.Forms.Label
-        Me.TextBox2 = New System.Windows.Forms.TextBox
+        Me.txtTimeLeft = New System.Windows.Forms.TextBox
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.TextBox3 = New System.Windows.Forms.TextBox
+        Me.txtQuestion = New System.Windows.Forms.TextBox
         Me.Label5 = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
+        Me.btnTrue = New System.Windows.Forms.Button
+        Me.btnFalse = New System.Windows.Forms.Button
+        Me.stBtnR = New System.Windows.Forms.Button
+        Me.lblQuestionNumber = New System.Windows.Forms.Label
         Me.SuspendLayout()
         '
         'Label2
@@ -96,19 +98,19 @@ Partial Class MainGame
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "SCORE"
         '
-        'TextBox1
+        'txtScore
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.Black
-        Me.TextBox1.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.LawnGreen
-        Me.TextBox1.Location = New System.Drawing.Point(489, 13)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(40, 26)
-        Me.TextBox1.TabIndex = 8
-        Me.TextBox1.TabStop = False
-        Me.TextBox1.Text = "99"
+        Me.txtScore.BackColor = System.Drawing.Color.Black
+        Me.txtScore.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtScore.ForeColor = System.Drawing.Color.LawnGreen
+        Me.txtScore.Location = New System.Drawing.Point(489, 13)
+        Me.txtScore.Multiline = True
+        Me.txtScore.Name = "txtScore"
+        Me.txtScore.ReadOnly = True
+        Me.txtScore.Size = New System.Drawing.Size(40, 26)
+        Me.txtScore.TabIndex = 8
+        Me.txtScore.TabStop = False
+        Me.txtScore.Text = "99"
         '
         'Label4
         '
@@ -121,19 +123,19 @@ Partial Class MainGame
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "TIME LEFT"
         '
-        'TextBox2
+        'txtTimeLeft
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.Black
-        Me.TextBox2.Font = New System.Drawing.Font("Courier New", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.LawnGreen
-        Me.TextBox2.Location = New System.Drawing.Point(317, 66)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(98, 40)
-        Me.TextBox2.TabIndex = 10
-        Me.TextBox2.TabStop = False
-        Me.TextBox2.Text = "10"
+        Me.txtTimeLeft.BackColor = System.Drawing.Color.Black
+        Me.txtTimeLeft.Font = New System.Drawing.Font("Courier New", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTimeLeft.ForeColor = System.Drawing.Color.LawnGreen
+        Me.txtTimeLeft.Location = New System.Drawing.Point(317, 66)
+        Me.txtTimeLeft.Multiline = True
+        Me.txtTimeLeft.Name = "txtTimeLeft"
+        Me.txtTimeLeft.ReadOnly = True
+        Me.txtTimeLeft.Size = New System.Drawing.Size(98, 40)
+        Me.txtTimeLeft.TabIndex = 10
+        Me.txtTimeLeft.TabStop = False
+        Me.txtTimeLeft.Text = "10"
         '
         'ProgressBar1
         '
@@ -148,56 +150,76 @@ Partial Class MainGame
         '
         Me.Timer1.Interval = 10
         '
-        'TextBox3
+        'txtQuestion
         '
-        Me.TextBox3.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.ForeColor = System.Drawing.Color.Yellow
-        Me.TextBox3.Location = New System.Drawing.Point(12, 171)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(588, 67)
-        Me.TextBox3.TabIndex = 12
-        Me.TextBox3.TabStop = False
-        Me.TextBox3.Text = "Accountants in the Philippines who are ASEAN certified can work in any ASEAN memb" & _
+        Me.txtQuestion.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.txtQuestion.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtQuestion.ForeColor = System.Drawing.Color.Yellow
+        Me.txtQuestion.Location = New System.Drawing.Point(12, 171)
+        Me.txtQuestion.Multiline = True
+        Me.txtQuestion.Name = "txtQuestion"
+        Me.txtQuestion.ReadOnly = True
+        Me.txtQuestion.Size = New System.Drawing.Size(588, 67)
+        Me.txtQuestion.TabIndex = 12
+        Me.txtQuestion.TabStop = False
+        Me.txtQuestion.Text = "Accountants in the Philippines who are ASEAN certified can work in any ASEAN memb" & _
             "er states"
-        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtQuestion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gold
-        Me.Label5.Location = New System.Drawing.Point(237, 138)
+        Me.Label5.Location = New System.Drawing.Point(197, 138)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(119, 30)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "QUESTION"
         '
-        'Button1
+        'btnTrue
         '
-        Me.Button1.BackColor = System.Drawing.Color.Lime
-        Me.Button1.Font = New System.Drawing.Font("Lucida Console", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Snow
-        Me.Button1.Location = New System.Drawing.Point(49, 244)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(221, 104)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "TRUE"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnTrue.BackColor = System.Drawing.Color.Lime
+        Me.btnTrue.Font = New System.Drawing.Font("Lucida Console", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTrue.ForeColor = System.Drawing.Color.Snow
+        Me.btnTrue.Location = New System.Drawing.Point(49, 244)
+        Me.btnTrue.Name = "btnTrue"
+        Me.btnTrue.Size = New System.Drawing.Size(221, 104)
+        Me.btnTrue.TabIndex = 14
+        Me.btnTrue.Text = "TRUE"
+        Me.btnTrue.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnFalse
         '
-        Me.Button2.BackColor = System.Drawing.Color.Firebrick
-        Me.Button2.Font = New System.Drawing.Font("Lucida Console", 45.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.Info
-        Me.Button2.Location = New System.Drawing.Point(332, 244)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(221, 104)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = "FALSE"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnFalse.BackColor = System.Drawing.Color.Firebrick
+        Me.btnFalse.Font = New System.Drawing.Font("Lucida Console", 45.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFalse.ForeColor = System.Drawing.SystemColors.Info
+        Me.btnFalse.Location = New System.Drawing.Point(332, 244)
+        Me.btnFalse.Name = "btnFalse"
+        Me.btnFalse.Size = New System.Drawing.Size(221, 104)
+        Me.btnFalse.TabIndex = 15
+        Me.btnFalse.Text = "FALSE"
+        Me.btnFalse.UseVisualStyleBackColor = False
+        '
+        'stBtnR
+        '
+        Me.stBtnR.Location = New System.Drawing.Point(49, 66)
+        Me.stBtnR.Name = "stBtnR"
+        Me.stBtnR.Size = New System.Drawing.Size(117, 23)
+        Me.stBtnR.TabIndex = 16
+        Me.stBtnR.Text = "RandomTest"
+        Me.stBtnR.UseVisualStyleBackColor = True
+        '
+        'lblQuestionNumber
+        '
+        Me.lblQuestionNumber.AutoSize = True
+        Me.lblQuestionNumber.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblQuestionNumber.ForeColor = System.Drawing.Color.Gold
+        Me.lblQuestionNumber.Location = New System.Drawing.Point(322, 138)
+        Me.lblQuestionNumber.Name = "lblQuestionNumber"
+        Me.lblQuestionNumber.Size = New System.Drawing.Size(25, 30)
+        Me.lblQuestionNumber.TabIndex = 17
+        Me.lblQuestionNumber.Text = "1"
         '
         'MainGame
         '
@@ -205,14 +227,16 @@ Partial Class MainGame
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(612, 360)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.lblQuestionNumber)
+        Me.Controls.Add(Me.stBtnR)
+        Me.Controls.Add(Me.btnFalse)
+        Me.Controls.Add(Me.btnTrue)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtQuestion)
         Me.Controls.Add(Me.ProgressBar1)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtTimeLeft)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtScore)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblPass)
         Me.Controls.Add(Me.Label3)
@@ -232,13 +256,15 @@ Partial Class MainGame
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents lblPass As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtScore As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtTimeLeft As System.Windows.Forms.TextBox
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtQuestion As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnTrue As System.Windows.Forms.Button
+    Friend WithEvents btnFalse As System.Windows.Forms.Button
+    Friend WithEvents stBtnR As System.Windows.Forms.Button
+    Friend WithEvents lblQuestionNumber As System.Windows.Forms.Label
 End Class

@@ -13,16 +13,16 @@
         QA(7) = New String() {"ASEAN Academy of Engineering and Technology (AAET) was established in Malaysia", "False"}
         QA(8) = New String() {"An integrated ASEAN market will create 14 million extra jobs in the region by 2025", "True"}
         QA(9) = New String() {"Laos was spared in the Vietnam War", "False"}
-        QA(10) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
-        QA(11) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
-        QA(12) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
-        QA(13) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
-        QA(14) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
-        QA(15) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
-        QA(16) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
-        QA(17) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
-        QA(18) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
-        QA(19) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
+        QA(10) = New String() {"Is Jakarta the capital of Thailand?", "False"}
+        QA(11) = New String() {"National Flower of Laos is Dok champa?", "True"}
+        QA(12) = New String() {"Current President of the Republic of the Union of Myanmar is Thein sein", "True"}
+        QA(13) = New String() {"Currency of Brunei is Baht", "False"}
+        QA(14) = New String() {"One vision,one identity,one community is the motto of ASEAN", "True"}
+        QA(15) = New String() {"The largest producer of rubber in Southeast Asia is Philippines", "False"}
+        QA(16) = New String() {"Indonesian archipelago comprises of around 14,000 islands", "False"}
+        QA(17) = New String() {"ZOPFAN is the acronym for  Zone of Peace", "False"}
+        QA(18) = New String() {"Philippine hosted 2013 Asean Games", "False"}
+        QA(19) = New String() {"The Philippines comprises of 10,000 islands.", "False"}
         QA(20) = New String() {"THIS IS A STUB QUESTION = TRUE", "True"}
     End Sub
 

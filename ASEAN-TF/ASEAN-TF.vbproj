@@ -66,6 +66,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalVariables.vb" />
     <Compile Include="Instructions.Designer.vb">
       <DependentUpon>Instructions.vb</DependentUpon>
     </Compile>
@@ -78,6 +79,7 @@
     <Compile Include="MainGame.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MainGameFunctions.vb" />
     <Compile Include="MainMenu.vb">
       <SubType>Form</SubType>
     </Compile>
