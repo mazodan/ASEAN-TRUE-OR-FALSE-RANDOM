@@ -34,6 +34,14 @@
         QA(28) = New String() {"Noi Bai International Airport is located in Ho Chi Minh City, Vietnam", "False"}
         QA(29) = New String() {"Nasi Lemak is one of the well known dishes from Malaysia", "True"}
         QA(30) = New String() {"Burobudur was built 300 years before Cambodia's Angkor Wat", "True"}
+        QA(31) = New String() {"Bangkok is the capital city of Thailand", "True"}
+        QA(32) = New String() {"Hanoi is the Capital city of Vietnam", "True"}
+        QA(33) = New String() {"Myanmar’s Currency known as Burmese Kyat", "True"}
+        QA(34) = New String() {"The Language that most Burmese speak is Burmese", "True"}
+        QA(35) = New String() {"Indonesia’s Largest Islands consist of Sumatra, Java, Kalimantan (Borneo)", "True"}
+        QA(36) = New String() {"Thanwil is the longest river in Southeast Asia", "False"}
+        QA(37) = New String() {"Changi International Airport is the main hub of Singapore Airlines", "False"}
+        QA(38) = New String() {"ASEAN stands for Association of Southeast Asean Nations", "False"}
     End Sub
 
 End Class
