@@ -42,6 +42,17 @@
         QA(36) = New String() {"Thanwil is the longest river in Southeast Asia", "False"}
         QA(37) = New String() {"Changi International Airport is the main hub of Singapore Airlines", "False"}
         QA(38) = New String() {"ASEAN stands for Association of Southeast Asean Nations", "False"}
+        QA(39) = New String() {"Philippines will host the ASEAN summit during the 50th anniversary of ASEAN", "True"}
+        QA(40) = New String() {"Asean Centre for Biodiversity is Located in Manila", "False"}
+        QA(41) = New String() {"Thailand experienced 12 coup d'état's", "False"}
+        QA(42) = New String() {"Pho is a popular street food in vietnam", "True"}
+        QA(43) = New String() {"Khao Yai is Thailand's oldest and most visited reserve", "True"}
+        QA(44) = New String() {"Manila Cathedral is the largest religious monument in ASEAN", "False"}
+        QA(45) = New String() {"ASEAN Inter-Parliamentary Assembly is formed after 10 years after the founding of ASEAN", "True"}
+        QA(46) = New String() {"Tubbataha Reefs Natural Park is still rehabilitated", "False"}
+        QA(47) = New String() {"ASEAN economy totals nearly $1 trillion", "True"}
+        QA(48) = New String() {"Rose is a national flower in any ASEAN states", "False"}
+        QA(49) = New String() {"Ayeyarwady is the longest river in Myanmar", "True"}
     End Sub
 
 End Class

@@ -51,7 +51,7 @@ Public Class MainGame
         While QuestionAlreadyUsed = True
             'Uses while statement to repeat if Question is already asked
             'array will reset in a new game;
-            rInteger = MGF.rNumber(0, 39)
+            rInteger = MGF.rNumber(0, 49)
             'gets random number
             If AnswerArrays.Contains(rInteger.ToString) = True Then
                 QuestionAlreadyUsed = True
