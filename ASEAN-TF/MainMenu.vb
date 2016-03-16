@@ -10,12 +10,7 @@
 
     
     Private Sub btnStart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStart.Click
-        'THIS IS A STUB
-        'Dim xforce As New Questions
-        'xforce.LoadQuestions()
-        'MessageBox.Show(xforce.QA(5)(0))
-
-        MainGame.Show()
-        Me.Hide()
+        MainGame.Show() 'starts the main game and hides this form
+        Me.Hide()    'hides this form
     End Sub
 End Class

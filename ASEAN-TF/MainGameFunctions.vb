@@ -49,11 +49,19 @@ Public Class MainGameFunctions
     End Sub
 
     Sub playTheQuestionSound()
-        My.Computer.Audio.Play(My.Resources.QuestionSound, AudioPlayMode.BackgroundLoop)
+        My.Computer.Audio.Play(My.Resources.QuestionSound, AudioPlayMode.BackgroundLoop) 'plays question sound
     End Sub
 
     Sub StopBackgroundSound()
-        My.Computer.Audio.Stop()
+        My.Computer.Audio.Stop()        'stops the sound
+    End Sub
+
+    Sub placeSymbolsInLabels(ByVal lbl As Label, ByVal rpt As Integer, ByVal str As String)
+        'this functions either sets the heart or check symbol in the respective labels
+        lbl.Text = ""               'clears the text to prevent overlaps
+        For i As Integer = 1 To rpt     'loops until the value of lives or passes
+            lbl.Text = lbl.Text + str   'and repeats the ❤  or ✔ depending on the lives or passes left
+        Next
     End Sub
 
 End Class

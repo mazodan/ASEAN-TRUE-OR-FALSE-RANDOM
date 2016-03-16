@@ -96,7 +96,7 @@ Partial Class Instructions
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(478, 50)
         Me.Label5.TabIndex = 7
-        Me.Label5.Text = "YOU WIN THE QUIZ BY SUCCESSFULLY ANSWERING" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "10 QUESTION"
+        Me.Label5.Text = "YOU WIN THE QUIZ BY SUCCESSFULLY ANSWERING" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "10 QUESTIONS"
         '
         'Label6
         '
